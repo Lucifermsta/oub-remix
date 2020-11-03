@@ -113,9 +113,9 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit("**Bee Right Back!!!**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + " [ ]"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + " "))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=" [ ]"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=" "))
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#BRB\nBe Right Back!")
     ISAFK = True
