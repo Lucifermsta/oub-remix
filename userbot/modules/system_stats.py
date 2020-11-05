@@ -224,7 +224,7 @@ async def amireallyalive(alive):
     uptime = await get_readable_time((time.time() - StartTime))
     output = (f"`Telethon version`: {version.__version__} \n"
              f"`Python version🐍`: {python_version()} \n"
-             f"`User`: {DEFAULTUSER} nii-saan\n"
+             f"`User`: {DEFAULTUSER} \n"
              f"`Bot Uptime ⏱️`: {uptime} \n")
     if ALIVE_LOGO:
         try:
