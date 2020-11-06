@@ -22,7 +22,7 @@ async def help(event):
             await event.edit("**Module doesn't exist or Module name is invalid**")
     else:
         await event.edit(f"**All modules are listed below**\
-            \nUsage: Type `.help <module name>` to know how it works\
+            \nUsage: Type `.help <module name>` for module help\
             \nModules loaded: {len(modules)}")
         string = ""
         for i in sorted(CMD_HELP):
