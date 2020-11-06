@@ -26,8 +26,7 @@ async def help(event):
             \nModules loaded: {len(modules)}")
         string = ""
         for i in sorted(CMD_HELP):
-            string += "`" +
- str(i)
+            string += "`" + str(i)
             string += "`  •  "
         modules_list = await event.reply(string)
         await asyncio.sleep(300)
