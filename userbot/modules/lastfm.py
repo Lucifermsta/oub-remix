@@ -61,7 +61,7 @@ async def last_fm(lastFM):
             pass
         tags = await gettags(isNowPlaying=True, playing=playing)
         rectrack = parse.quote_plus(f"{playing}")
-        rectrack = sub("^", "https://open.spotify.com/search/results/",
+        rectrack = sub("^", "https://www.genyt.net/search.php?q=",
                        rectrack)
         if image:
             output = f"[‎]({image})[{LASTFM_USERNAME}]({username}) __is now listening to:__\n\n• [{playing}]({rectrack})\n`{tags}`"
@@ -78,7 +78,7 @@ async def last_fm(lastFM):
             tags = await gettags(track)
             rectrack = parse.quote_plus(str(printable))
             rectrack = sub("^",
-                           "https://open.spotify.com/search/results/",
+                           "https://www.genyt.net/search.php?q=",
                            rectrack)
             output += f"• [{printable}]({rectrack})\n"
             if tags:
